@@ -4,6 +4,5 @@
 
 {
   echo "[Autologin]"
-  echo "Relogin=true"
   echo "Session=$1.desktop"
 } > "/etc/sddm.conf.d/zz-resteamed-autologin.conf"
