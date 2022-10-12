@@ -7,7 +7,7 @@ arch=('any')
 url="https://github.com/Kevadroz/resteamed-session-manager"
 license=('GPL3')
 depends=('resteamed-core' 'sddm')
-source=("$pkgname-$pkgver::https://github.com/Resteamed-Linux/$pkgname/releases/download/v$pkgver/resteamed-session-manager-0.1-tarball.tar.gz")
+source=("$pkgname-$pkgver::https://github.com/Resteamed-Linux/$pkgname/releases/download/v$pkgver/resteamed-session-manager-$pkgver-tarball.tar.gz")
 
 package() {
 	cp -r "$srcdir/usr" "$pkgdir/"
