@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Sets sddm autologin to first argument, for polkit actions.
+
+{
+  echo "[Autologin]"
+  echo "Relogin=true"
+  echo "Session=$1.desktop"
+} > "/etc/sddm.conf.d/zz-resteamed-autologin.conf"

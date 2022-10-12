@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#Reset autologin to Gamemeode
+pkexec resteamed-dm-config "gamescope-wayland"
+
+user_config_dir="${XDG_CONF_DIR:-"$HOME/.config"}"
+config="$user_config_dir/resteamed/session_manager.conf"
+
+# Ensure that config file exists, then load it
+resteamed-config check session_manager
+source "$config"
+
+# Execute the 'session command' if it exists
+if (type $preferred_session) then
+	eval " $preferred_session"
+fi

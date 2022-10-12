@@ -1,0 +1,20 @@
+#!/bin/sh
+#This script is executed by steam when the 'Switch to Desktop Mode' button is activated.
+
+requested_session="${1:-gamescope}"
+
+#Recplace the passed value if it was trying to invoke plasma-oneshot
+if [ "$requested_session" = "plasma" ]; then
+  selected_session="resteamed-desktop-oneshot"
+else
+  selected_session=$requested_session
+fi
+
+#Change The dm autologin config
+pkexec resteamed-dm-config $selected_session
+
+#Restart the dm
+pkexec resteamed-restart-dm
+
+#Kill steam just in case
+killall -s 9 steam

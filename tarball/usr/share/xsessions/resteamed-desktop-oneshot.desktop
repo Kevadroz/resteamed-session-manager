@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=XSession
+Exec=/usr/bin/resteamed-start-desktop
+TryExec=/usr/bin/resteamed-start-desktop
+DesktopNames=Desktop (One-Time Launch)
+Name=Resteamed Desktop (One-Time Launch)
+Comment=Desktop Session One Time Launch Redirect for Resteamed Sessions
